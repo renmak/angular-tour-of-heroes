@@ -11,6 +11,8 @@ import { HeroService } from '../hero.service';
 export class HeroesComponent implements OnInit {
   heroes: Hero[] = [];
 
+// The parameter simultaneously defines a private heroService property and identifies it as a HeroService injection site.
+// When Angular creates a HeroesComponent, the Dependency Injection system sets the heroService parameter to the singleton instance of HeroService.
   constructor(private heroService: HeroService) { }
 
   ngOnInit() {
